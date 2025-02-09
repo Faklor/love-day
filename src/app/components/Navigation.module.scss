@@ -1,0 +1,112 @@
+.navigation {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      width: 2px;
+      height: calc(100% - 12px);
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+    }
+
+    li {
+      margin-bottom: 15px;
+      position: relative;
+
+      button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 5px 5px 5px 25px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 1);
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: rgba(255, 255, 255, 1);
+          z-index: 1;
+        }
+      }
+
+      &.active {
+        button {
+          color: #2F2E41;
+          &::before {
+            background-color: #2F2E41;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Стили для светлой секции (Home)
+.light {
+  ul {
+    &::after {
+      background-color: rgba(34, 31, 35, 0.5);
+    }
+    
+    li {
+      button {
+        color: rgba(34, 31, 35, 0.5);
+        &::before {
+          background-color: rgba(34, 31, 35, 0.5);
+        }
+      }
+      
+      &.active button {
+        color: #2F2E41;
+        &::before {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+// Стили для темных секций (About, Comments)
+.dark {
+  ul {
+    &::after {
+      background-color: #CF1E35;
+    }
+    
+    li {
+      button {
+        color: #CF1E35;
+        &::before {
+          background-color: #CF1E35;
+        }
+      }
+      
+      &.active button {
+        color: white;
+        &::before {
+          background-color: white;
+        }
+      }
+    }
+  }
+} 

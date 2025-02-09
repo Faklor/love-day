@@ -1,0 +1,66 @@
+.commentsSection {
+  padding: 4rem 2rem;
+}
+
+.commentsList {
+  max-width: 800px;
+  max-height: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow-y: auto;
+  padding-right: 1rem;
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    
+    &:hover {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+.comment {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 10px;
+  position: relative;
+
+  h3 {
+    color: #CF1E35;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+  }
+
+  p {
+    color: white;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .date {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+  }
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+} 
