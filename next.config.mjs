@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = { 
-    output: 'export', // Статическая сборка для GitHub Pages
+    output: 'export',
+    basePath: '/love-day',
+    assetPrefix: '/love-day',
     images: {
-      unoptimized: true, // Для работы с GitHub Pages
+      unoptimized: true,
     },
     // Отключаем телеметрию, если хотите
     typescript: {

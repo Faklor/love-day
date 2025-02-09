@@ -44,7 +44,7 @@ export default function Home() {
         {/* Логотип в сердце */}
         <div className={styles.logoContainer}>
           <Image 
-            src="/heart-logo.svg"
+            src="/love-day/heart-logo.svg"
             alt="Heart Logo"
             width={200}
             height={200}
@@ -66,7 +66,7 @@ export default function Home() {
         {/* Маленькие фигурки справа */}
         <div className={styles.smallFigures}>
           <Image 
-            src="/small-figures.svg"
+            src="/love-day/small-figures.svg"
             alt="Small Figures"
             width={150}
             height={150}
@@ -78,7 +78,7 @@ export default function Home() {
         <div className={styles.mountainsContainer}>
           <div className={styles.mountainFront}>
             <Image 
-              src="/mountains.svg"
+              src="/love-day/mountains.svg"
               alt="Mountains Front"
               width={1920}
               height={400}
@@ -88,7 +88,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainMiddle}>
             <Image 
-              src="/mountains.svg"
+              src="/love-day/mountains.svg"
               alt="Mountains Middle"
               width={1920}
               height={400}
@@ -97,7 +97,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainBack}>
             <Image 
-              src="/mountains.svg"
+              src="/love-day/mountains.svg"
               alt="Mountains Back"
               width={1920}
               height={400}
