@@ -41,10 +41,9 @@ export default function Home() {
       <Navigation />
       
       <section id="home" className={`${styles.heroSection} hero-section`}>
-        {/* Логотип в сердце */}
         <div className={styles.logoContainer}>
           <Image 
-            src="/heart-logo.svg"
+            src={`/images/heart-logo.svg`}
             alt="Heart Logo"
             width={200}
             height={200}
@@ -53,20 +52,17 @@ export default function Home() {
           />
         </div>
 
-        {/* Имена справа от логотипа */}
         <h1 className={styles.names}>
           Alex <span>+</span> Alice
         </h1>
 
-        {/* Счетчик дней справа */}
         <div className={styles.counter}>
           {daysCount} days<br />without
         </div>
 
-        {/* Маленькие фигурки справа */}
         <div className={styles.smallFigures}>
           <Image 
-            src="/small-figures.svg"
+            src={`/images/small-figures.svg`}
             alt="Small Figures"
             width={150}
             height={150}
@@ -74,11 +70,10 @@ export default function Home() {
           />
         </div>
 
-        {/* Горы внизу */}
         <div className={styles.mountainsContainer}>
           <div className={styles.mountainFront}>
             <Image 
-              src="/mountains.svg"
+              src={`/images/mountains.svg`}
               alt="Mountains Front"
               width={1920}
               height={400}
@@ -88,7 +83,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainMiddle}>
             <Image 
-              src="/mountains.svg"
+              src={`/images/mountains.svg`}
               alt="Mountains Middle"
               width={1920}
               height={400}
@@ -97,7 +92,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainBack}>
             <Image 
-              src="/mountains.svg"
+              src={`/images/mountains.svg`}
               alt="Mountains Back"
               width={1920}
               height={400}
