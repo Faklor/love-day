@@ -43,7 +43,7 @@ export default function Home() {
       <section id="home" className={`${styles.heroSection} hero-section`}>
         <div className={styles.logoContainer}>
           <Image 
-            src={`love-day/images/heart-logo.svg`}
+            src={`/images/heart-logo.svg`}
             alt="Heart Logo"
             width={200}
             height={200}
@@ -62,7 +62,7 @@ export default function Home() {
 
         <div className={styles.smallFigures}>
           <Image 
-            src={`love-day/images/small-figures.svg`}
+            src={`/images/small-figures.svg`}
             alt="Small Figures"
             width={150}
             height={150}
@@ -73,7 +73,7 @@ export default function Home() {
         <div className={styles.mountainsContainer}>
           <div className={styles.mountainFront}>
             <Image 
-              src={`love-day/images/mountains.svg`}
+              src={`/images/mountains.svg`}
               alt="Mountains Front"
               width={1920}
               height={400}
@@ -83,7 +83,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainMiddle}>
             <Image 
-              src={`love-day/images/mountains.svg`}
+              src={`/images/mountains.svg`}
               alt="Mountains Middle"
               width={1920}
               height={400}
@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className={styles.mountainBack}>
             <Image 
-              src={`love-day/images/mountains.svg`}
+              src={`/images/mountains.svg`}
               alt="Mountains Back"
               width={1920}
               height={400}
