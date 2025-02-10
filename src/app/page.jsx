@@ -121,7 +121,7 @@ export default function Home() {
             />
           </div>
         </div>
-        
+
         <h2 className={styles.aboutTitle}>Photo Gallery</h2>
         <div className={styles.photoGallery}>
          
@@ -135,7 +135,7 @@ export default function Home() {
               }}
             >
               <Image
-                src={`/images/photo_2025-02-10_09-${index + 1}.jpg`}
+                src={`${basePath}/images/photo_2025-02-10_09-${index + 1}.jpg`}
                 alt={`Photo ${index + 1}`}
                 width={300}
                 height={400}
