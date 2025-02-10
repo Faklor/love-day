@@ -4,6 +4,7 @@ import CommentForm from './CommentForm';
 
 const Comments = () => {
   const [comments, setComments] = useState([]);
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
   useEffect(() => {
     fetchComments();
@@ -11,7 +12,7 @@ const Comments = () => {
 
   const fetchComments = async () => {
     try {
-      const response = await fetch('/api/comments');
+      const response = await fetch(`${basePath}/api/comments`);
       const data = await response.json();
       
       if (data.comments) {

@@ -104,8 +104,46 @@ export default function Home() {
       </section>
 
       <section id="about" className={styles.aboutSection}>
-        <h2>About Us</h2>
-        {/* Здесь будет контент для About секции */}
+        <h2 className={styles.aboutTitle}>About Us</h2>
+        <div className={styles.aboutContent}>
+          <div className={styles.aboutText} >
+            <p>Добро пожаловать на сайт, посвященный Дню Святого Валентина и нашей любви. Мы - Алекс и Алиса, пара, которая нашла друг друга и построила крепкие, значимые отношения, полные любви и взаимопонимания.</p>
+            <p>Наш сайт - это Габелла, просто без комментариев.</p>
+            <p>С тех пор как он появился, бытовых проблем стало больше, поцелуев меньше, но дрель купили, зачем интересно? Не расскажу.</p>
+          </div>
+          <div className={styles.aboutImage}>
+            <Image 
+              src={`${basePath}/images/about_1.svg`}
+              alt="About Us"
+              width={400}
+              height={400}
+              priority
+            />
+          </div>
+        </div>
+        
+        <h2 className={styles.aboutTitle}>Photo Gallery</h2>
+        <div className={styles.photoGallery}>
+         
+          {[...Array(14)].map((_, index) => (
+            <div 
+              key={index} 
+              className={styles.photoItem}
+              style={{
+                transform: `translateY(${index % 2 === 0 ? '20%' : '0%'})`,
+                animationDelay: `${index * 0.1}s`
+              }}
+            >
+              <Image
+                src={`/images/photo_2025-02-10_09-${index + 1}.jpg`}
+                alt={`Photo ${index + 1}`}
+                width={300}
+                height={400}
+                className={styles.photo}
+              />
+            </div>
+          ))}
+        </div>
       </section>
 
       <section id="comments" className={styles.commentsSection}>
