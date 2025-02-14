@@ -35,6 +35,25 @@ export default function Home() {
       loop: true,
       easing: 'easeInOutQuad'
     })
+
+    // Добавляем анимацию частиц
+    const particlesAnimation = () => {
+      const particles = [...document.querySelectorAll('.particle')]
+      
+      anime({
+        targets: particles,
+        translateX: () => anime.random(-300, 300),
+        translateY: () => anime.random(-300, 300),
+        scale: () => anime.random(0.2, 1),
+        opacity: [0.8, 0],
+        duration: () => anime.random(1000, 2000),
+        delay: anime.stagger(100),
+        complete: particlesAnimation,
+        easing: 'easeOutExpo'
+      })
+    }
+
+    particlesAnimation()
   }, [])
 
   return (
@@ -163,6 +182,16 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
+        <div className={styles.particlesContainer}>
+          {[...Array(15)].map((_, index) => (
+            <div 
+              key={index}
+              className={`${styles.particle} particle`}
+            >
+              ❤️
+            </div>
+          ))}
+        </div>
         <div className={styles.hearts}>
           {[...Array(5)].map((_, index) => (
             <div 
