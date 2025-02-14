@@ -13,7 +13,7 @@ const Navigation = ({ activeSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'comments']
+      const sections = ['home', 'about', 'video']
       const current = sections.find(section => {
         const element = document.getElementById(section)
         const rect = element.getBoundingClientRect()
@@ -26,7 +26,7 @@ const Navigation = ({ activeSection }) => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkSection = activeSection === 'about' || activeSection === 'comments';
+  const isDarkSection = activeSection === 'about' || activeSection === 'video';
   
   return (
     <nav className={`${styles.navigation} ${isDarkSection ? styles.dark : ''}`}>
@@ -37,8 +37,8 @@ const Navigation = ({ activeSection }) => {
         <li className={activeSection === 'about' ? styles.active : ''}>
           <button onClick={() => scrollToSection('about')}>About</button>
         </li>
-        <li className={activeSection === 'comments' ? styles.active : ''}>
-          <button onClick={() => scrollToSection('comments')}>Comments</button>
+        <li className={activeSection === 'video' ? styles.active : ''}>
+          <button onClick={() => scrollToSection('video')}>Video</button>
         </li>
       </ul>
     </nav>

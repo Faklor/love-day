@@ -146,8 +146,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="comments" className={styles.commentsSection}>
-        <Comments />
+      <section id="video" className={styles.videoSection}>
+        <video 
+          autoPlay
+          loop
+          muted
+          playsInline
+          className={styles.video}
+        >
+          <source src={`${basePath}/video/love-story.mp4`} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.videoOverlay}>
+          <h2 className={styles.videoTitle}>Our Story</h2>
+        </div>
       </section>
     </main>
   )
