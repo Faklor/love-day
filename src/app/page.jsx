@@ -161,6 +161,22 @@ export default function Home() {
           <h2 className={styles.videoTitle}>Our Story</h2>
         </div>
       </section>
+
+      <footer className={styles.footer}>
+        <div className={styles.hearts}>
+          {[...Array(5)].map((_, index) => (
+            <div 
+              key={index} 
+              className={styles.heart}
+              style={{ 
+                animationDelay: `${index * 0.3}s`,
+                left: `${20 * (index + 1)}%`
+              }}
+            >❤️</div>
+          ))}
+        </div>
+        <p>Created with ❤️ by <a href="https://github.com/faklor" target="_blank" rel="noopener noreferrer">faklor</a></p>
+      </footer>
     </main>
   )
 } 
